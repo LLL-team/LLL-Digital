@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'WebWeavers | Crafting Digital Experiences',
+  title: 'LLL Digital | Crafting Digital Experiences',
   description: 'A premier web development team dedicated to building fast, responsive, and beautiful websites.',
 };
 

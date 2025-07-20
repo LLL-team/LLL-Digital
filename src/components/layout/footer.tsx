@@ -8,7 +8,7 @@ export function Footer() {
         <div className="flex items-center gap-2">
           <Code className="h-6 w-6 text-primary" />
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} WebWeavers. All rights reserved.
+            &copy; {new Date().getFullYear()} LLL Digital. All rights reserved.
           </p>
         </div>
         <div className="flex items-center gap-4">

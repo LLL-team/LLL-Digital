@@ -1,7 +1,7 @@
-// use server'
+'use server'
 
 /**
- * @fileOverview This file defines the service recommendation flow for WebWeavers.
+ * @fileOverview This file defines the service recommendation flow for LLL Digital.
  *
  * - recommendServices - A function that takes a description of client needs and returns a recommendation of relevant services.
  * - ServiceRecommendationInput - The input type for the recommendServices function.
@@ -36,19 +36,11 @@ const prompt = ai.definePrompt({
   name: 'serviceRecommendationPrompt',
   input: {schema: ServiceRecommendationInputSchema},
   output: {schema: ServiceRecommendationOutputSchema},
-  prompt: `You are an AI-powered service recommender for WebWeavers, a web development team.
+  prompt: `You are an AI-powered service recommender for LLL Digital, a web development team.
   Analyze the client's needs and recommend the most relevant web development services with customized solutions.
   Also, provide a personalized introduction and a set of talking points for initial client interactions with the client.
 
 Client Needs: {{{clientNeeds}}}
-
-Respond with the following format:
-\`\`\`json
-{
-  "recommendedServices": "[List of recommended services and customized solutions]",
-  "personalizedIntroduction": "[Personalized introduction and talking points]"
-}
-\`\`\`
 `,
 });
 

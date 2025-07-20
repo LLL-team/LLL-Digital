@@ -48,7 +48,7 @@ export function Team() {
     <section id="team" className="py-20 bg-muted/50">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold">Meet the Weavers</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">Meet the Team</h2>
           <p className="text-lg text-muted-foreground mt-2">
             The creative minds behind our successful projects.
           </p>

@@ -9,14 +9,14 @@ const testimonials = [
     title: 'CEO, TechCorp',
     image: 'https://placehold.co/100x100.png',
     hint: 'business woman portrait',
-    quote: "WebWeavers transformed our online presence. Their team is professional, creative, and delivered beyond our expectations. Highly recommended!",
+    quote: "LLL Digital transformed our online presence. Their team is professional, creative, and delivered beyond our expectations. Highly recommended!",
   },
   {
     name: 'Mike D.',
     title: 'Founder, StartupX',
     image: 'https://placehold.co/100x100.png',
     hint: 'startup founder portrait',
-    quote: "Working with WebWeavers was a breeze. They understood our vision perfectly and brought it to life with incredible skill and speed.",
+    quote: "Working with LLL Digital was a breeze. They understood our vision perfectly and brought it to life with incredible skill and speed.",
   },
   {
     name: 'Emily R.',

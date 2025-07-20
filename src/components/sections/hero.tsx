@@ -11,7 +11,7 @@ export function Hero() {
           Crafting Digital Experiences That Inspire
         </h1>
         <p className="text-lg text-muted-foreground">
-          At WebWeavers, we build fast, responsive, and beautiful websites that
+          At LLL Digital, we build fast, responsive, and beautiful websites that
           drive results. Let's create something amazing together.
         </p>
         <div className="flex gap-4 mt-4">

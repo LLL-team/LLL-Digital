@@ -17,7 +17,7 @@ const TalkingPointsInputSchema = z.object({
     .describe('Description of the client needs and project requirements.'),
   companyDescription: z
     .string()
-    .describe('A brief description of WebWeavers company and expertise.'),
+    .describe('A brief description of LLL Digital company and expertise.'),
 });
 export type TalkingPointsInput = z.infer<typeof TalkingPointsInputSchema>;
 
@@ -41,11 +41,11 @@ const prompt = ai.definePrompt({
   name: 'talkingPointsPrompt',
   input: {schema: TalkingPointsInputSchema},
   output: {schema: TalkingPointsOutputSchema},
-  prompt: `You are an AI assistant for WebWeavers, a web development company.
+  prompt: `You are an AI assistant for LLL Digital, a web development company.
 
-You will generate a personalized introduction and talking points for initial client interactions based on the client's needs and WebWeavers description.
+You will generate a personalized introduction and talking points for initial client interactions based on the client's needs and LLL Digital description.
 
-WebWeavers Description: {{{companyDescription}}}
+LLL Digital Description: {{{companyDescription}}}
 Client Needs: {{{clientNeeds}}}
 
 Introduction:
