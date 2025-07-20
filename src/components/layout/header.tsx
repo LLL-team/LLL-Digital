@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Code } from 'lucide-react';
 import { LanguageSwitcher } from './language-switcher';
+import { ThemeToggle } from './theme-toggle';
 
 type Dictionary = {
   services: string;
@@ -50,6 +51,7 @@ export function Header({ dictionary }: { dictionary: Dictionary }) {
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-2">
            <LanguageSwitcher />
+           <ThemeToggle />
           <Button asChild>
             <Link href="#contact">{dictionary.requestQuote}</Link>
           </Button>
