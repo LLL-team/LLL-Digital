@@ -1,0 +1,174 @@
+
+{
+  "header": {
+    "services": "Servicios",
+    "portfolio": "Portafolio",
+    "team": "Equipo",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "requestQuote": "Solicitar Cotización",
+    "toggleMenu": "Alternar Menú"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados."
+  },
+  "hero": {
+    "title": "Creando Experiencias Digitales que Inspiran",
+    "subtitle": "En LLL Digital, construimos sitios web rápidos, responsivos y atractivos que generan resultados. Creemos algo increíble juntos.",
+    "viewWork": "Ver Nuestro Trabajo",
+    "ourServices": "Nuestros Servicios"
+  },
+  "services": {
+    "title": "Nuestra Experiencia",
+    "subtitle": "Ofrecemos una amplia gama de servicios de desarrollo web.",
+    "items": [
+      {
+        "title": "Desarrollo Web",
+        "description": "Construyendo sitios web robustos y escalables desde cero con las últimas tecnologías."
+      },
+      {
+        "title": "Diseño UI/UX",
+        "description": "Creando interfaces de usuario intuitivas y atractivas que brindan una experiencia de usuario excepcional."
+      },
+      {
+        "title": "Optimización SEO",
+        "description": "Mejorando la visibilidad de su sitio web en los motores de búsqueda para atraer más tráfico orgánico."
+      },
+      {
+        "title": "Soluciones de E-commerce",
+        "description": "Desarrollando tiendas en línea con todas las funciones para ayudarlo a vender sus productos de manera efectiva."
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Nuestro Trabajo",
+    "subtitle": "Un vistazo a algunos de los proyectos de los que estamos orgullosos.",
+    "projects": [
+      {
+        "title": "Plataforma de E-commerce",
+        "description": "Un sitio de comercio electrónico moderno con un CMS personalizado e integración de pasarela de pago.",
+        "tags": ["Next.js", "Stripe", "Sanity"]
+      },
+      {
+        "title": "Dashboard SaaS",
+        "description": "Un panel de visualización de datos para una empresa líder de SaaS en el espacio de marketing.",
+        "tags": ["React", "D3.js", "Firebase"]
+      },
+      {
+        "title": "Sitio Web Corporativo",
+        "description": "Un sitio web corporativo elegante y profesional para una empresa Fortune 500.",
+        "tags": ["Gatsby", "Contentful", "GraphQL"]
+      },
+      {
+        "title": "Aplicación de Reservas",
+        "description": "Una aplicación de reservas optimizada para dispositivos móviles para una cadena de hoteles boutique.",
+        "tags": ["Vue.js", "Node.js", "MongoDB"]
+      }
+    ]
+  },
+  "aiRecommender": {
+    "title": "Recomendador de Servicios con IA",
+    "subtitle": "¿No estás seguro por dónde empezar? Describe tu proyecto y nuestra IA sugerirá los mejores servicios y temas de conversación para nuestra primera reunión.",
+    "formLabel": "Describe las necesidades de tu proyecto",
+    "formPlaceholder": "Ej: 'Necesito un sitio web de comercio electrónico rápido para mi marca de ropa con un blog y un diseño moderno...'",
+    "formButton": "Obtener Recomendaciones",
+    "formButtonLoading": "Analizando...",
+    "thinking": "Nuestra IA está pensando...",
+    "error": "No se pudieron obtener las recomendaciones. Por favor, inténtalo de nuevo.",
+    "recommendedServices": "Servicios Recomendados",
+    "personalizedIntroduction": "Introducción Personalizada",
+    "validationError": "Por favor, describe tus necesidades en al menos 20 caracteres."
+  },
+  "team": {
+    "title": "Conoce al Equipo",
+    "subtitle": "Las mentes creativas detrás de nuestros exitosos proyectos.",
+    "members": [
+      {
+        "name": "Alex Johnson",
+        "role": "Desarrollador Principal",
+        "bio": "Alex es un mago del full-stack con más de una década de experiencia en la creación de aplicaciones web complejas.",
+        "expertise": ["React", "Node.js", "DevOps"]
+      },
+      {
+        "name": "Maria Garcia",
+        "role": "Diseñadora UI/UX",
+        "bio": "Maria tiene un ojo agudo para el diseño y crea interfaces hermosas y fáciles de usar que a los usuarios les encantan.",
+        "expertise": ["Figma", "Investigación de Usuarios", "Prototipos"]
+      },
+      {
+        "name": "Sam Chen",
+        "role": "Desarrollador Frontend",
+        "bio": "Sam se especializa en la creación de frontends perfectos a nivel de píxel y responsivos con un enfoque en el rendimiento.",
+        "expertise": ["Vue.js", "TypeScript", "Animación Web"]
+      },
+      {
+        "name": "Jessica Williams",
+        "role": "Gerente de Proyectos",
+        "bio": "Jessica se asegura de que los proyectos se entreguen a tiempo y dentro del presupuesto, manteniendo a los clientes contentos e informados.",
+        "expertise": ["Agile", "Scrum", "Relaciones con Clientes"]
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Lo que Dicen Nuestros Clientes",
+    "subtitle": "Historias reales de nuestros socios satisfechos.",
+    "items": [
+      {
+        "name": "Sarah L.",
+        "title": "CEO, TechCorp",
+        "quote": "LLL Digital transformó nuestra presencia en línea. Su equipo es profesional, creativo y superó nuestras expectativas. ¡Muy recomendable!"
+      },
+      {
+        "name": "Mike D.",
+        "title": "Fundador, StartupX",
+        "quote": "Trabajar con LLL Digital fue muy fácil. Entendieron nuestra visión a la perfección y la hicieron realidad con una habilidad y velocidad increíbles."
+      },
+      {
+        "name": "Emily R.",
+        "title": "Directora de Marketing, InnovateCo",
+        "quote": "El nuevo sitio web ha aumentado significativamente nuestra interacción y conversiones. La experiencia del equipo en UI/UX es inigualable."
+      }
+    ]
+  },
+  "blog": {
+    "title": "De Nuestro Blog",
+    "subtitle": "Perspectivas sobre desarrollo web, diseño y más.",
+    "readMore": "Leer Más",
+    "posts": [
+      {
+        "title": "El Auge de Serverless: Guía para Desarrolladores",
+        "date": "15 de julio de 2024",
+        "category": "Tendencias"
+      },
+      {
+        "title": "5 Principios de UI/UX para una Mejor Experiencia de Usuario",
+        "date": "8 de julio de 2024",
+        "category": "Diseño"
+      },
+      {
+        "title": "Optimizando Next.js para el Rendimiento",
+        "date": "1 de julio de 2024",
+        "category": "Tutorial"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Ponte en Contacto",
+    "subtitle": "¿Tienes un proyecto en mente? Hablemos.",
+    "name": "Nombre",
+    "namePlaceholder": "Tu Nombre",
+    "email": "Correo Electrónico",
+    "emailPlaceholder": "tu.correo@ejemplo.com",
+    "subject": "Asunto",
+    "subjectPlaceholder": "Consulta de Proyecto",
+    "message": "Mensaje",
+    "messagePlaceholder": "Cuéntanos sobre tu proyecto...",
+    "send": "Enviar Mensaje",
+    "successTitle": "¡Mensaje Enviado!",
+    "successDescription": "Gracias por contactarnos. Te responderemos pronto.",
+    "errorName": "El nombre debe tener al menos 2 caracteres.",
+    "errorEmail": "Por favor, introduce un correo electrónico válido.",
+    "errorSubject": "El asunto debe tener al menos 5 caracteres.",
+    "errorMessage": "El mensaje debe tener al menos 10 caracteres."
+  }
+}

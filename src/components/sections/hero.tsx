@@ -3,26 +3,32 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 
-export function Hero() {
+type Dictionary = {
+  title: string;
+  subtitle: string;
+  viewWork: string;
+  ourServices: string;
+};
+
+export function Hero({ dictionary }: { dictionary: Dictionary }) {
   return (
     <section className="container grid lg:grid-cols-2 gap-12 items-center py-20 md:py-32">
       <div className="flex flex-col gap-4">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
-          Crafting Digital Experiences That Inspire
+          {dictionary.title}
         </h1>
         <p className="text-lg text-muted-foreground">
-          At LLL Digital, we build fast, responsive, and beautiful websites that
-          drive results. Let's create something amazing together.
+          {dictionary.subtitle}
         </p>
         <div className="flex gap-4 mt-4">
           <Button size="lg" asChild>
             <Link href="#portfolio">
-              View Our Work
+              {dictionary.viewWork}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
           <Button size="lg" variant="outline" asChild>
-            <Link href="#services">Our Services</Link>
+            <Link href="#services">{dictionary.ourServices}</Link>
           </Button>
         </div>
       </div>

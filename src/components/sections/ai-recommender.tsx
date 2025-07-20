@@ -13,16 +13,30 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Loader2, Sparkles, Lightbulb, MessageSquare } from 'lucide-react';
 import type { ServiceRecommendationOutput } from '@/ai/flows/service-recommendation';
 
-const formSchema = z.object({
-  clientNeeds: z.string().min(20, {
-    message: 'Please describe your needs in at least 20 characters.',
-  }),
-});
+type Dictionary = {
+  title: string;
+  subtitle: string;
+  formLabel: string;
+  formPlaceholder: string;
+  formButton: string;
+  formButtonLoading: string;
+  thinking: string;
+  error: string;
+  recommendedServices: string;
+  personalizedIntroduction: string;
+  validationError: string;
+};
 
-export function AiRecommender() {
+export function AiRecommender({ dictionary }: { dictionary: Dictionary }) {
   const [recommendation, setRecommendation] = useState<ServiceRecommendationOutput | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  
+  const formSchema = z.object({
+    clientNeeds: z.string().min(20, {
+      message: dictionary.validationError,
+    }),
+  });
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -41,7 +55,7 @@ export function AiRecommender() {
     if (result.success && result.data) {
       setRecommendation(result.data);
     } else {
-      setError(result.error || 'An unknown error occurred.');
+      setError(result.error || dictionary.error);
     }
     setIsLoading(false);
   }
@@ -53,10 +67,10 @@ export function AiRecommender() {
           <div className="mb-4">
             <h2 className="text-3xl md:text-4xl font-bold flex items-center gap-2">
               <Sparkles className="h-8 w-8 text-accent" />
-              AI Service Recommender
+              {dictionary.title}
             </h2>
             <p className="text-lg text-muted-foreground mt-2">
-              Not sure where to start? Describe your project, and our AI will suggest the best services and talking points for our first meeting.
+              {dictionary.subtitle}
             </p>
           </div>
           <Card>
@@ -68,10 +82,10 @@ export function AiRecommender() {
                     name="clientNeeds"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-lg">Describe your project needs</FormLabel>
+                        <FormLabel className="text-lg">{dictionary.formLabel}</FormLabel>
                         <FormControl>
                           <Textarea
-                            placeholder="e.g., 'I need a fast e-commerce website for my clothing brand with a blog and a modern design...'"
+                            placeholder={dictionary.formPlaceholder}
                             className="min-h-[150px]"
                             {...field}
                           />
@@ -84,10 +98,10 @@ export function AiRecommender() {
                     {isLoading ? (
                       <>
                         <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                        Analyzing...
+                        {dictionary.formButtonLoading}
                       </>
                     ) : (
-                      'Get Recommendations'
+                      dictionary.formButton
                     )}
                   </Button>
                 </form>
@@ -99,7 +113,7 @@ export function AiRecommender() {
           {isLoading && (
             <div className="flex flex-col items-center justify-center h-full gap-4">
               <Loader2 className="h-12 w-12 animate-spin text-accent" />
-              <p className="text-muted-foreground">Our AI is thinking...</p>
+              <p className="text-muted-foreground">{dictionary.thinking}</p>
             </div>
           )}
           {error && <Card className="bg-destructive/10 border-destructive"><CardContent className="p-6"><p className="text-destructive">{error}</p></CardContent></Card>}
@@ -109,7 +123,7 @@ export function AiRecommender() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Lightbulb className="h-6 w-6 text-accent" />
-                    Recommended Services
+                    {dictionary.recommendedServices}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -120,7 +134,7 @@ export function AiRecommender() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <MessageSquare className="h-6 w-6 text-accent" />
-                    Personalized Introduction
+                    {dictionary.personalizedIntroduction}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>

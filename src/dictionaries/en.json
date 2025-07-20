@@ -1,0 +1,174 @@
+
+{
+  "header": {
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "team": "Team",
+    "blog": "Blog",
+    "contact": "Contact",
+    "requestQuote": "Request a Quote",
+    "toggleMenu": "Toggle Menu"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "hero": {
+    "title": "Crafting Digital Experiences That Inspire",
+    "subtitle": "At LLL Digital, we build fast, responsive, and beautiful websites that drive results. Let's create something amazing together.",
+    "viewWork": "View Our Work",
+    "ourServices": "Our Services"
+  },
+  "services": {
+    "title": "Our Expertise",
+    "subtitle": "We provide a wide range of web development services.",
+    "items": [
+      {
+        "title": "Web Development",
+        "description": "Building robust and scalable websites from scratch with the latest technologies."
+      },
+      {
+        "title": "UI/UX Design",
+        "description": "Creating intuitive and beautiful user interfaces that provide an exceptional user experience."
+      },
+      {
+        "title": "SEO Optimization",
+        "description": "Improving your website’s visibility on search engines to attract more organic traffic."
+      },
+      {
+        "title": "E-commerce Solutions",
+        "description": "Developing full-featured online stores to help you sell your products effectively."
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Our Work",
+    "subtitle": "A glimpse into some of the projects we are proud of.",
+    "projects": [
+      {
+        "title": "E-commerce Platform",
+        "description": "A modern e-commerce site with a custom CMS and payment gateway integration.",
+        "tags": ["Next.js", "Stripe", "Sanity"]
+      },
+      {
+        "title": "SaaS Dashboard",
+        "description": "A data visualization dashboard for a leading SaaS company in the marketing space.",
+        "tags": ["React", "D3.js", "Firebase"]
+      },
+      {
+        "title": "Corporate Website",
+        "description": "A sleek and professional corporate website for a Fortune 500 company.",
+        "tags": ["Gatsby", "Contentful", "GraphQL"]
+      },
+      {
+        "title": "Booking App",
+        "description": "A mobile-first booking application for a chain of boutique hotels.",
+        "tags": ["Vue.js", "Node.js", "MongoDB"]
+      }
+    ]
+  },
+  "aiRecommender": {
+    "title": "AI Service Recommender",
+    "subtitle": "Not sure where to start? Describe your project, and our AI will suggest the best services and talking points for our first meeting.",
+    "formLabel": "Describe your project needs",
+    "formPlaceholder": "e.g., 'I need a fast e-commerce website for my clothing brand with a blog and a modern design...'",
+    "formButton": "Get Recommendations",
+    "formButtonLoading": "Analyzing...",
+    "thinking": "Our AI is thinking...",
+    "error": "Failed to get recommendations. Please try again.",
+    "recommendedServices": "Recommended Services",
+    "personalizedIntroduction": "Personalized Introduction",
+    "validationError": "Please describe your needs in at least 20 characters."
+  },
+  "team": {
+    "title": "Meet the Team",
+    "subtitle": "The creative minds behind our successful projects.",
+    "members": [
+      {
+        "name": "Alex Johnson",
+        "role": "Lead Developer",
+        "bio": "Alex is a full-stack wizard with over a decade of experience in building complex web applications.",
+        "expertise": ["React", "Node.js", "DevOps"]
+      },
+      {
+        "name": "Maria Garcia",
+        "role": "UI/UX Designer",
+        "bio": "Maria has a keen eye for design and crafts beautiful, user-friendly interfaces that users love.",
+        "expertise": ["Figma", "User Research", "Prototyping"]
+      },
+      {
+        "name": "Sam Chen",
+        "role": "Frontend Developer",
+        "bio": "Sam specializes in creating pixel-perfect, responsive frontends with a focus on performance.",
+        "expertise": ["Vue.js", "TypeScript", "Web Animation"]
+      },
+      {
+        "name": "Jessica Williams",
+        "role": "Project Manager",
+        "bio": "Jessica ensures projects are delivered on time and on budget, keeping clients happy and informed.",
+        "expertise": ["Agile", "Scrum", "Client Relations"]
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Real stories from our satisfied partners.",
+    "items": [
+      {
+        "name": "Sarah L.",
+        "title": "CEO, TechCorp",
+        "quote": "LLL Digital transformed our online presence. Their team is professional, creative, and delivered beyond our expectations. Highly recommended!"
+      },
+      {
+        "name": "Mike D.",
+        "title": "Founder, StartupX",
+        "quote": "Working with LLL Digital was a breeze. They understood our vision perfectly and brought it to life with incredible skill and speed."
+      },
+      {
+        "name": "Emily R.",
+        "title": "Marketing Director, InnovateCo",
+        "quote": "The new website has significantly boosted our engagement and conversions. The team's expertise in UI/UX is unmatched."
+      }
+    ]
+  },
+  "blog": {
+    "title": "From Our Blog",
+    "subtitle": "Insights on web development, design, and more.",
+    "readMore": "Read More",
+    "posts": [
+      {
+        "title": "The Rise of Serverless: A Developer's Guide",
+        "date": "July 15, 2024",
+        "category": "Trends"
+      },
+      {
+        "title": "5 UI/UX Principles for a Better User Experience",
+        "date": "July 8, 2024",
+        "category": "Design"
+      },
+      {
+        "title": "Optimizing Next.js for Performance",
+        "date": "July 1, 2024",
+        "category": "Tutorial"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have a project in mind? Let's talk.",
+    "name": "Name",
+    "namePlaceholder": "Your Name",
+    "email": "Email",
+    "emailPlaceholder": "your.email@example.com",
+    "subject": "Subject",
+    "subjectPlaceholder": "Project Inquiry",
+    "message": "Message",
+    "messagePlaceholder": "Tell us about your project...",
+    "send": "Send Message",
+    "successTitle": "Message Sent!",
+    "successDescription": "Thanks for reaching out. We'll get back to you soon.",
+    "errorName": "Name must be at least 2 characters.",
+    "errorEmail": "Please enter a valid email.",
+    "errorSubject": "Subject must be at least 5 characters.",
+    "errorMessage": "Message must be at least 10 characters."
+  }
+}

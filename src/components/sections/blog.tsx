@@ -5,38 +5,47 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const posts = [
+type Post = {
+  title: string;
+  date: string;
+  category: string;
+};
+
+type Dictionary = {
+  title: string;
+  subtitle: string;
+  readMore: string;
+  posts: Post[];
+};
+
+const postData = [
   {
-    title: 'The Rise of Serverless: A Developer\'s Guide',
-    date: 'July 15, 2024',
-    category: 'Trends',
     image: 'https://placehold.co/400x250.png',
     hint: 'cloud servers',
   },
   {
-    title: '5 UI/UX Principles for a Better User Experience',
-    date: 'July 8, 2024',
-    category: 'Design',
     image: 'https://placehold.co/400x250.png',
     hint: 'design wireframe',
   },
   {
-    title: 'Optimizing Next.js for Performance',
-    date: 'July 1, 2024',
-    category: 'Tutorial',
     image: 'https://placehold.co/400x250.png',
     hint: 'code editor',
   },
 ];
 
-export function Blog() {
+export function Blog({ dictionary }: { dictionary: Dictionary }) {
+  const posts = dictionary.posts.map((post, index) => ({
+    ...post,
+    ...postData[index],
+  }));
+
   return (
     <section id="blog" className="py-20 bg-muted/50">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold">From Our Blog</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">{dictionary.title}</h2>
           <p className="text-lg text-muted-foreground mt-2">
-            Insights on web development, design, and more.
+            {dictionary.subtitle}
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -60,7 +69,7 @@ export function Blog() {
               <CardFooter className="p-6 pt-0">
                 <Button variant="link" asChild className="p-0 h-auto">
                   <Link href="#">
-                    Read More <ArrowRight className="ml-2 h-4 w-4" />
+                    {dictionary.readMore} <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </CardFooter>

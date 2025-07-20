@@ -5,17 +5,28 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Code } from 'lucide-react';
+import { LanguageSwitcher } from './language-switcher';
 
-const navItems = [
-  { label: 'Services', href: '#services' },
-  { label: 'Portfolio', href: '#portfolio' },
-  { label: 'Team', href: '#team' },
-  { label: 'Blog', href: '#blog' },
-  { label: 'Contact', href: '#contact' },
-];
+type Dictionary = {
+  services: string;
+  portfolio: string;
+  team: string;
+  blog: string;
+  contact: string;
+  requestQuote: string;
+  toggleMenu: string;
+};
 
-export function Header() {
+export function Header({ dictionary }: { dictionary: Dictionary }) {
   const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const navItems = [
+    { label: dictionary.services, href: '#services' },
+    { label: dictionary.portfolio, href: '#portfolio' },
+    { label: dictionary.team, href: '#team' },
+    { label: dictionary.blog, href: '#blog' },
+    { label: dictionary.contact, href: '#contact' },
+  ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -37,15 +48,16 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <div className="flex flex-1 items-center justify-end space-x-4">
+        <div className="flex flex-1 items-center justify-end space-x-2">
+           <LanguageSwitcher />
           <Button asChild>
-            <Link href="#contact">Request a Quote</Link>
+            <Link href="#contact">{dictionary.requestQuote}</Link>
           </Button>
           <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="md:hidden">
                 <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle Menu</span>
+                <span className="sr-only">{dictionary.toggleMenu}</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="left">

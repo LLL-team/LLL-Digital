@@ -4,53 +4,55 @@ import { Badge } from '@/components/ui/badge';
 import { Linkedin, Github } from 'lucide-react';
 import Link from 'next/link';
 
-const teamMembers = [
+type Member = {
+  name: string;
+  role: string;
+  bio: string;
+  expertise: string[];
+};
+
+type Dictionary = {
+  title: string;
+  subtitle: string;
+  members: Member[];
+};
+
+const teamMemberData = [
   {
-    name: 'Alex Johnson',
-    role: 'Lead Developer',
-    bio: 'Alex is a full-stack wizard with over a decade of experience in building complex web applications.',
     image: 'https://placehold.co/200x200.png',
     hint: 'male developer portrait',
-    expertise: ['React', 'Node.js', 'DevOps'],
     social: { linkedin: '#', github: '#' },
   },
   {
-    name: 'Maria Garcia',
-    role: 'UI/UX Designer',
-    bio: 'Maria has a keen eye for design and crafts beautiful, user-friendly interfaces that users love.',
     image: 'https://placehold.co/200x200.png',
     hint: 'female designer portrait',
-    expertise: ['Figma', 'User Research', 'Prototyping'],
     social: { linkedin: '#', github: '#' },
   },
   {
-    name: 'Sam Chen',
-    role: 'Frontend Developer',
-    bio: 'Sam specializes in creating pixel-perfect, responsive frontends with a focus on performance.',
     image: 'https://placehold.co/200x200.png',
     hint: 'male programmer portrait',
-    expertise: ['Vue.js', 'TypeScript', 'Web Animation'],
     social: { linkedin: '#', github: '#' },
   },
   {
-    name: 'Jessica Williams',
-    role: 'Project Manager',
-    bio: 'Jessica ensures projects are delivered on time and on budget, keeping clients happy and informed.',
     image: 'https://placehold.co/200x200.png',
     hint: 'female manager portrait',
-    expertise: ['Agile', 'Scrum', 'Client Relations'],
     social: { linkedin: '#', github: '#' },
   },
 ];
 
-export function Team() {
+export function Team({ dictionary }: { dictionary: Dictionary }) {
+  const teamMembers = dictionary.members.map((member, index) => ({
+    ...member,
+    ...teamMemberData[index],
+  }));
+
   return (
     <section id="team" className="py-20 bg-muted/50">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold">Meet the Team</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">{dictionary.title}</h2>
           <p className="text-lg text-muted-foreground mt-2">
-            The creative minds behind our successful projects.
+            {dictionary.subtitle}
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

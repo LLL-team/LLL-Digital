@@ -1,7 +1,13 @@
 import type {NextConfig} from 'next';
 
+const i18n = {
+  locales: ['en', 'es'],
+  defaultLocale: 'en',
+}
+
 const nextConfig: NextConfig = {
   /* config options here */
+  i18n,
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -20,4 +26,6 @@ const nextConfig: NextConfig = {
   },
 };
 
+export type Locale = typeof i18n['locales'][number]
+export { i18n };
 export default nextConfig;
