@@ -27,6 +27,21 @@ type Dictionary = {
   validationError: string;
 };
 
+const MarkdownRenderer = ({ text }: { text: string }) => {
+  const lines = text.split('\n').map((line, index) => {
+    if (line.startsWith('* ') || line.startsWith('- ')) {
+      return (
+        <li key={index} className="ml-4 list-disc">
+          {line.substring(2)}
+        </li>
+      );
+    }
+    return <p key={index}>{line}</p>;
+  });
+
+  return <div className="space-y-2 text-muted-foreground">{lines}</div>;
+};
+
 export function AiRecommender({ dictionary }: { dictionary: Dictionary }) {
   const [recommendation, setRecommendation] = useState<ServiceRecommendationOutput | null>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -127,7 +142,7 @@ export function AiRecommender({ dictionary }: { dictionary: Dictionary }) {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="whitespace-pre-wrap text-muted-foreground">{recommendation.recommendedServices}</p>
+                  <MarkdownRenderer text={recommendation.recommendedServices} />
                 </CardContent>
               </Card>
               <Card className="shadow-lg animate-in fade-in-50 slide-in-from-bottom-5 duration-700">
@@ -138,7 +153,7 @@ export function AiRecommender({ dictionary }: { dictionary: Dictionary }) {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="whitespace-pre-wrap text-muted-foreground">{recommendation.personalizedIntroduction}</p>
+                   <MarkdownRenderer text={recommendation.personalizedIntroduction} />
                 </CardContent>
               </Card>
             </div>
