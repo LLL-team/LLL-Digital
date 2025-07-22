@@ -23,21 +23,6 @@ const teamMemberData = [
     hint: 'male developer portrait',
     social: { linkedin: '#', github: '#' },
   },
-  {
-    image: 'https://placehold.co/200x200.png',
-    hint: 'female designer portrait',
-    social: { linkedin: '#', github: '#' },
-  },
-  {
-    image: 'https://placehold.co/200x200.png',
-    hint: 'male programmer portrait',
-    social: { linkedin: '#', github: '#' },
-  },
-  {
-    image: 'https://placehold.co/200x200.png',
-    hint: 'female manager portrait',
-    social: { linkedin: '#', github: '#' },
-  },
 ];
 
 export function Team({ dictionary }: { dictionary: Dictionary }) {
@@ -55,9 +40,9 @@ export function Team({ dictionary }: { dictionary: Dictionary }) {
             {dictionary.subtitle}
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
           {teamMembers.map((member) => (
-            <Card key={member.name} className="text-center shadow-md hover:shadow-xl transition-shadow duration-300">
+            <Card key={member.name} className="text-center shadow-md hover:shadow-xl transition-shadow duration-300 max-w-sm">
               <CardContent className="p-6">
                 <Image
                   src={member.image}

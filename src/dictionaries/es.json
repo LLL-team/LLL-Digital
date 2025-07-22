@@ -81,31 +81,13 @@
   },
   "team": {
     "title": "Conoce al Equipo",
-    "subtitle": "Las mentes creativas detrás de nuestros exitosos proyectos.",
+    "subtitle": "La mente creativa detrás de nuestros exitosos proyectos.",
     "members": [
       {
-        "name": "Alex Johnson",
-        "role": "Desarrollador Principal",
-        "bio": "Alex es un mago del full-stack con más de una década de experiencia en la creación de aplicaciones web complejas.",
-        "expertise": ["React", "Node.js", "DevOps"]
-      },
-      {
-        "name": "Maria Garcia",
-        "role": "Diseñadora UI/UX",
-        "bio": "Maria tiene un ojo agudo para el diseño y crea interfaces hermosas y fáciles de usar que a los usuarios les encantan.",
-        "expertise": ["Figma", "Investigación de Usuarios", "Prototipos"]
-      },
-      {
-        "name": "Sam Chen",
-        "role": "Desarrollador Frontend",
-        "bio": "Sam se especializa en la creación de frontends perfectos a nivel de píxel y responsivos con un enfoque en el rendimiento.",
-        "expertise": ["Vue.js", "TypeScript", "Animación Web"]
-      },
-      {
-        "name": "Jessica Williams",
-        "role": "Gerente de Proyectos",
-        "bio": "Jessica se asegura de que los proyectos se entreguen a tiempo y dentro del presupuesto, manteniendo a los clientes contentos e informados.",
-        "expertise": ["Agile", "Scrum", "Relaciones con Clientes"]
+        "name": "Gerónimo Le Lan Toussaint",
+        "role": "Desarrollador Full-Stack",
+        "bio": "Gerónimo es un desarrollador full-stack versátil con experiencia en Flutter, Laravel y metodologías Agile, apasionado por crear aplicaciones robustas y eficientes.",
+        "expertise": ["Full-Stack", "Flutter", "Laravel", "Agile"]
       }
     ]
   },

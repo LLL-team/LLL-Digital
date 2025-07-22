@@ -81,31 +81,13 @@
   },
   "team": {
     "title": "Meet the Team",
-    "subtitle": "The creative minds behind our successful projects.",
+    "subtitle": "The creative mind behind our successful projects.",
     "members": [
       {
-        "name": "Alex Johnson",
-        "role": "Lead Developer",
-        "bio": "Alex is a full-stack wizard with over a decade of experience in building complex web applications.",
-        "expertise": ["React", "Node.js", "DevOps"]
-      },
-      {
-        "name": "Maria Garcia",
-        "role": "UI/UX Designer",
-        "bio": "Maria has a keen eye for design and crafts beautiful, user-friendly interfaces that users love.",
-        "expertise": ["Figma", "User Research", "Prototyping"]
-      },
-      {
-        "name": "Sam Chen",
-        "role": "Frontend Developer",
-        "bio": "Sam specializes in creating pixel-perfect, responsive frontends with a focus on performance.",
-        "expertise": ["Vue.js", "TypeScript", "Web Animation"]
-      },
-      {
-        "name": "Jessica Williams",
-        "role": "Project Manager",
-        "bio": "Jessica ensures projects are delivered on time and on budget, keeping clients happy and informed.",
-        "expertise": ["Agile", "Scrum", "Client Relations"]
+        "name": "Gerónimo Le Lan Toussaint",
+        "role": "Full-Stack Developer",
+        "bio": "Gerónimo is a versatile full-stack developer with expertise in Flutter, Laravel, and Agile methodologies, passionate about creating robust and efficient applications.",
+        "expertise": ["Full-Stack", "Flutter", "Laravel", "Agile"]
       }
     ]
   },
