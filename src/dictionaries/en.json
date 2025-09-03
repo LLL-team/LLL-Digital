@@ -81,13 +81,21 @@
   },
   "team": {
     "title": "Meet the Team",
-    "subtitle": "The creative mind behind our successful projects.",
+    "subtitle": "The creative minds behind our successful projects.",
     "members": [
       {
         "name": "Gerónimo Le Lan Toussaint",
         "role": "Full-Stack Developer",
+        "title": "Information Systems Engineer",
         "bio": "Gerónimo is a versatile full-stack developer with expertise in Flutter, Laravel, and Agile methodologies, passionate about creating robust and efficient applications.",
         "expertise": ["Full-Stack", "Flutter", "Laravel", "Agile"]
+      },
+      {
+        "name": "Juan Manuel Luis",
+        "role": "Full-Stack Developer",
+        "title": "Bachelor of Computer Science",
+        "bio": "Juan is a full-stack developer specializing in back-end technologies, with a strong focus on Laravel and Flutter to build powerful and scalable solutions.",
+        "expertise": ["Back-end", "Laravel", "Flutter", "Databases"]
       }
     ]
   },

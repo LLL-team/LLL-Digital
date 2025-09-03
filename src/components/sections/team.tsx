@@ -7,6 +7,7 @@ import Link from 'next/link';
 type Member = {
   name: string;
   role: string;
+  title: string;
   bio: string;
   expertise: string[];
 };
@@ -18,6 +19,11 @@ type Dictionary = {
 };
 
 const teamMemberData = [
+  {
+    image: 'https://placehold.co/200x200.png',
+    hint: 'male developer portrait',
+    social: { linkedin: '#', github: '#' },
+  },
   {
     image: 'https://placehold.co/200x200.png',
     hint: 'male developer portrait',
@@ -40,9 +46,9 @@ export function Team({ dictionary }: { dictionary: Dictionary }) {
             {dictionary.subtitle}
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
+        <div className="grid md:grid-cols-2 gap-8 justify-center">
           {teamMembers.map((member) => (
-            <Card key={member.name} className="text-center shadow-md hover:shadow-xl transition-shadow duration-300 max-w-sm">
+            <Card key={member.name} className="text-center shadow-md hover:shadow-xl transition-shadow duration-300 max-w-sm mx-auto">
               <CardContent className="p-6">
                 <Image
                   src={member.image}
@@ -53,7 +59,8 @@ export function Team({ dictionary }: { dictionary: Dictionary }) {
                   className="rounded-full mx-auto mb-4 border-4 border-accent/20"
                 />
                 <CardTitle className="text-xl">{member.name}</CardTitle>
-                <CardDescription className="text-accent font-medium">{member.role}</CardDescription>
+                <p className="text-sm text-muted-foreground">{member.title}</p>
+                <CardDescription className="text-accent font-medium mt-1">{member.role}</CardDescription>
                 <p className="text-muted-foreground mt-3 text-sm">{member.bio}</p>
                 <div className="flex flex-wrap gap-2 justify-center mt-4">
                   {member.expertise.map((skill) => (
