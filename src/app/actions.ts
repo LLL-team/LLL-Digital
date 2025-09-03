@@ -1,12 +1,33 @@
 'use server';
 
-export async function getServiceRecommendations(input: any) {
+import { Resend } from 'resend';
+import { ContactEmail } from '@/components/emails/contact-email';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+type ContactFormValues = {
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
+}
+
+export async function sendEmail(data: ContactFormValues) {
     try {
-        // const result = await recommendServices(input);
-        // return { success: true, data: result };
-        return { success: false, error: "This feature is not available." };
+        await resend.emails.send({
+            from: 'LLL Digital Contact <onboarding@resend.dev>',
+            to: 'gerolelant@gmail.com',
+            subject: `New Message: ${data.subject}`,
+            react: ContactEmail({
+                name: data.name,
+                email: data.email,
+                message: data.message,
+                subject: data.subject
+            })
+        });
+        return { success: true };
     } catch (error) {
-        console.error("AI service recommendation failed:", error);
-        return { success: false, error: "Failed to get recommendations. Please try again." };
+        console.error("Email sending failed:", error);
+        return { success: false, error: "Failed to send email. Please try again." };
     }
 }

@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -9,6 +10,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent } from '../ui/card';
+import { sendEmail } from '@/app/actions';
+import { Loader2 } from 'lucide-react';
 
 type Dictionary = {
   title: string;
@@ -22,8 +25,11 @@ type Dictionary = {
   message: string;
   messagePlaceholder: string;
   send: string;
+  sending: string;
   successTitle: string;
   successDescription: string;
+  errorTitle: string;
+  errorDescription: string;
   errorName: string;
   errorEmail: string;
   errorSubject: string;
@@ -32,6 +38,7 @@ type Dictionary = {
 
 export function Contact({ dictionary }: { dictionary: Dictionary }) {
   const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
 
   const formSchema = z.object({
     name: z.string().min(2, dictionary.errorName),
@@ -50,13 +57,24 @@ export function Contact({ dictionary }: { dictionary: Dictionary }) {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values); // In a real app, you'd send this to a server
-    toast({
-      title: dictionary.successTitle,
-      description: dictionary.successDescription,
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsLoading(true);
+    const result = await sendEmail(values);
+    setIsLoading(false);
+
+    if (result.success) {
+      toast({
+        title: dictionary.successTitle,
+        description: dictionary.successDescription,
+      });
+      form.reset();
+    } else {
+      toast({
+        variant: "destructive",
+        title: dictionary.errorTitle,
+        description: dictionary.errorDescription,
+      });
+    }
   }
 
   return (
@@ -126,7 +144,16 @@ export function Contact({ dictionary }: { dictionary: Dictionary }) {
                     </FormItem>
                   )}
                 />
-                <Button type="submit" className="w-full">{dictionary.send}</Button>
+                <Button type="submit" disabled={isLoading} className="w-full">
+                  {isLoading ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      {dictionary.sending}
+                    </>
+                  ) : (
+                    dictionary.send
+                  )}
+                </Button>
               </form>
             </Form>
           </CardContent>
