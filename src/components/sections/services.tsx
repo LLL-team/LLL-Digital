@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Code, PenTool, TrendingUp, ShoppingCart } from 'lucide-react';
+import { Code, PenTool, Smartphone, ShoppingCart } from 'lucide-react';
 
 type Service = {
   title: string;
@@ -15,7 +15,7 @@ type Dictionary = {
 const icons = [
   <Code key="code" className="h-8 w-8 text-accent" />,
   <PenTool key="pen" className="h-8 w-8 text-accent" />,
-  <TrendingUp key="trending" className="h-8 w-8 text-accent" />,
+  <Smartphone key="mobile" className="h-8 w-8 text-accent" />,
   <ShoppingCart key="cart" className="h-8 w-8 text-accent" />,
 ];
 
