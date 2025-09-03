@@ -35,7 +35,7 @@ export function Header({ dictionary }: { dictionary: Dictionary }) {
         <div className="mr-4 flex items-center">
           <Link href="/" className="flex items-center space-x-2">
             <Code className="h-6 w-6 text-primary" />
-            <span className="font-bold">LLL Digital</span>
+            <span className="font-bold hidden sm:inline-block">LLL Digital</span>
           </Link>
         </div>
         <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
@@ -52,7 +52,7 @@ export function Header({ dictionary }: { dictionary: Dictionary }) {
         <div className="flex flex-1 items-center justify-end space-x-2">
            <LanguageSwitcher />
            <ThemeToggle />
-          <Button asChild>
+          <Button asChild className="hidden sm:inline-flex">
             <Link href="#contact">{dictionary.requestQuote}</Link>
           </Button>
           <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>
@@ -80,6 +80,9 @@ export function Header({ dictionary }: { dictionary: Dictionary }) {
                     </Link>
                   ))}
                 </nav>
+                 <Button asChild className="mt-8 w-full">
+                  <Link href="#contact" onClick={() => setMenuOpen(false)}>{dictionary.requestQuote}</Link>
+                </Button>
               </div>
             </SheetContent>
           </Sheet>

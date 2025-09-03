@@ -12,15 +12,15 @@ type Dictionary = {
 
 export function Hero({ dictionary }: { dictionary: Dictionary }) {
   return (
-    <section className="container grid lg:grid-cols-2 gap-12 items-center py-20 md:py-32">
-      <div className="flex flex-col gap-4">
+    <section className="container grid lg:grid-cols-2 gap-12 items-center py-16 md:py-24">
+      <div className="flex flex-col gap-4 text-center lg:text-left">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
           {dictionary.title}
         </h1>
-        <p className="text-lg text-muted-foreground">
+        <p className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
           {dictionary.subtitle}
         </p>
-        <div className="flex gap-4 mt-4">
+        <div className="flex flex-col sm:flex-row gap-4 mt-4 justify-center lg:justify-start">
           <Button size="lg" asChild>
             <Link href="#portfolio">
               {dictionary.viewWork}
@@ -39,7 +39,7 @@ export function Hero({ dictionary }: { dictionary: Dictionary }) {
           data-ai-hint="digital agency"
           width={600}
           height={400}
-          className="rounded-lg shadow-2xl"
+          className="rounded-lg shadow-2xl w-full h-auto"
         />
         <div className="absolute -top-8 -left-8 w-32 h-32 bg-accent/20 rounded-full blur-3xl -z-10"></div>
         <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-primary/10 rounded-full blur-3xl -z-10"></div>
