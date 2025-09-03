@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Code } from 'lucide-react';
 import { LanguageSwitcher } from './language-switcher';
 import { ThemeToggle } from './theme-toggle';
@@ -61,6 +61,9 @@ export function Header({ dictionary }: { dictionary: Dictionary }) {
               </Button>
             </SheetTrigger>
             <SheetContent side="left">
+              <SheetHeader>
+                <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
+              </SheetHeader>
               <div className="p-4">
                 <Link href="/" className="flex items-center space-x-2 mb-8" onClick={() => setMenuOpen(false)}>
                   <Code className="h-6 w-6 text-primary" />
