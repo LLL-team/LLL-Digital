@@ -4,7 +4,6 @@
     "services": "Services",
     "portfolio": "Portfolio",
     "team": "Team",
-    "blog": "Blog",
     "contact": "Contact",
     "requestQuote": "Request a Quote",
     "toggleMenu": "Toggle Menu"
@@ -66,19 +65,6 @@
       }
     ]
   },
-  "aiRecommender": {
-    "title": "AI Service Recommender",
-    "subtitle": "Not sure where to start? Describe your project, and our AI will suggest the best services and talking points for our first meeting.",
-    "formLabel": "Describe your project needs",
-    "formPlaceholder": "e.g., 'I need a fast e-commerce website for my clothing brand with a blog and a modern design...'",
-    "formButton": "Get Recommendations",
-    "formButtonLoading": "Analyzing...",
-    "thinking": "Our AI is thinking...",
-    "error": "Failed to get recommendations. Please try again.",
-    "recommendedServices": "Recommended Services",
-    "personalizedIntroduction": "Personalized Introduction",
-    "validationError": "Please describe your needs in at least 20 characters."
-  },
   "team": {
     "title": "Meet the Team",
     "subtitle": "The creative minds behind our successful projects.",
@@ -117,28 +103,6 @@
         "name": "Emily R.",
         "title": "Marketing Director, InnovateCo",
         "quote": "The new website has significantly boosted our engagement and conversions. The team's expertise in UI/UX is unmatched."
-      }
-    ]
-  },
-  "blog": {
-    "title": "From Our Blog",
-    "subtitle": "Insights on web development, design, and more.",
-    "readMore": "Read More",
-    "posts": [
-      {
-        "title": "The Rise of Serverless: A Developer's Guide",
-        "date": "July 15, 2024",
-        "category": "Trends"
-      },
-      {
-        "title": "5 UI/UX Principles for a Better User Experience",
-        "date": "July 8, 2024",
-        "category": "Design"
-      },
-      {
-        "title": "Optimizing Next.js for Performance",
-        "date": "July 1, 2024",
-        "category": "Tutorial"
       }
     ]
   },

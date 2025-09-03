@@ -12,7 +12,6 @@ type Dictionary = {
   services: string;
   portfolio: string;
   team: string;
-  blog: string;
   contact: string;
   requestQuote: string;
   toggleMenu: string;
@@ -25,7 +24,6 @@ export function Header({ dictionary }: { dictionary: Dictionary }) {
     { label: dictionary.services, href: '#services' },
     { label: dictionary.portfolio, href: '#portfolio' },
     { label: dictionary.team, href: '#team' },
-    { label: dictionary.blog, href: '#blog' },
     { label: dictionary.contact, href: '#contact' },
   ];
 

@@ -4,7 +4,6 @@
     "services": "Servicios",
     "portfolio": "Portafolio",
     "team": "Equipo",
-    "blog": "Blog",
     "contact": "Contacto",
     "requestQuote": "Solicitar Cotización",
     "toggleMenu": "Alternar Menú"
@@ -66,19 +65,6 @@
       }
     ]
   },
-  "aiRecommender": {
-    "title": "Recomendador de Servicios con IA",
-    "subtitle": "¿No estás seguro por dónde empezar? Describe tu proyecto y nuestra IA sugerirá los mejores servicios y temas de conversación para nuestra primera reunión.",
-    "formLabel": "Describe las necesidades de tu proyecto",
-    "formPlaceholder": "Ej: 'Necesito un sitio web de comercio electrónico rápido para mi marca de ropa con un blog y un diseño moderno...'",
-    "formButton": "Obtener Recomendaciones",
-    "formButtonLoading": "Analizando...",
-    "thinking": "Nuestra IA está pensando...",
-    "error": "No se pudieron obtener las recomendaciones. Por favor, inténtalo de nuevo.",
-    "recommendedServices": "Servicios Recomendados",
-    "personalizedIntroduction": "Introducción Personalizada",
-    "validationError": "Por favor, describe tus necesidades en al menos 20 caracteres."
-  },
   "team": {
     "title": "Conoce al Equipo",
     "subtitle": "Las mentes creativas detrás de nuestros exitosos proyectos.",
@@ -117,28 +103,6 @@
         "name": "Emily R.",
         "title": "Directora de Marketing, InnovateCo",
         "quote": "El nuevo sitio web ha aumentado significativamente nuestra interacción y conversiones. La experiencia del equipo en UI/UX es inigualable."
-      }
-    ]
-  },
-  "blog": {
-    "title": "De Nuestro Blog",
-    "subtitle": "Perspectivas sobre desarrollo web, diseño y más.",
-    "readMore": "Leer Más",
-    "posts": [
-      {
-        "title": "El Auge de Serverless: Guía para Desarrolladores",
-        "date": "15 de julio de 2024",
-        "category": "Tendencias"
-      },
-      {
-        "title": "5 Principios de UI/UX para una Mejor Experiencia de Usuario",
-        "date": "8 de julio de 2024",
-        "category": "Diseño"
-      },
-      {
-        "title": "Optimizando Next.js para el Rendimiento",
-        "date": "1 de julio de 2024",
-        "category": "Tutorial"
       }
     ]
   },
